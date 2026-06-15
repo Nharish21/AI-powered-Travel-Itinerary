@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Trip Planner - Hari Travels</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ai-planner.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <nav>
+        <div class="logo">Hari Travels</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="ai-planner.html">AI Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="planner-section">
+        <h2>✈️ AI Trip Planner</h2>
+        <p>Let our AI create a personalized travel itinerary just for you</p>
+
+        <div class="planner-form">
+            <div class="form-group">
+                <label for="destination">Where do you want to go?</label>
+                <input type="text" id="destination" placeholder="e.g., Goa, Manali, Kerala, Jaipur">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="days">Number of Days</label>
+                    <select id="days">
+                        <option value="1">1 Day</option>
+                        <option value="2">2 Days</option>
+                        <option value="3" selected>3 Days</option>
+                        <option value="4">4 Days</option>
+                        <option value="5">5 Days</option>
+                        <option value="7">7 Days</option>
+                        <option value="10">10 Days</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="budget">Budget Level</label>
+                    <select id="budget">
+                        <option value="budget">Budget Friendly</option>
+                        <option value="moderate" selected>Moderate</option>
+                        <option value="luxury">Luxury</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Your Interests</label>
+                <div class="interests-grid">
+                    <label class="interest-tag"><input type="checkbox" value="History & Heritage" checked> History</label>
+                    <label class="interest-tag"><input type="checkbox" value="Food & Street Food" checked> Food</label>
+                    <label class="interest-tag"><input type="checkbox" value="Adventure & Trekking"> Adventure</label>
+                    <label class="interest-tag"><input type="checkbox" value="Nature & Scenic Views"> Nature</label>
+                    <label class="interest-tag"><input type="checkbox" value="Shopping & Markets"> Shopping</label>
+                    <label class="interest-tag"><input type="checkbox" value="Culture & Temples"> Culture</label>
+                    <label class="interest-tag"><input type="checkbox" value="Nightlife & Entertainment"> Nightlife</label>
+                    <label class="interest-tag"><input type="checkbox" value="Relaxation & Spa"> Relaxation</label>
+                </div>
+            </div>
+
+            <button id="generateBtn" class="btn generate-btn">🚀 Generate My Itinerary</button>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Creating your personalized itinerary...</p>
+        </div>
+
+        <div id="error" class="error-msg" style="display: none;"></div>
+
+        <div id="results" class="results-section" style="display: none;">
+            <h2>📋 Your Itinerary</h2>
+            <div id="itineraryText" class="itinerary-content"></div>
+
+            <h3>🗺️ Route Map</h3>
+            <div id="map" class="map-container"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Hari Travels. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="ai-planner.js"></script>
+</body>
+</html>

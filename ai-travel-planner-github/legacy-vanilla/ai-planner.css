@@ -1,0 +1,252 @@
+/* AI Planner Page Styles */
+
+.planner-section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.planner-section > h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.planner-section > p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* Form */
+.planner-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.form-group small {
+    color: #999;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+}
+
+.api-key-row {
+    display: flex;
+    gap: 8px;
+}
+
+.api-key-row input {
+    flex: 1;
+}
+
+.toggle-btn {
+    background: #ecf0f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #2c3e50;
+}
+
+.toggle-btn:hover {
+    background: #ddd;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Interest tags */
+.interests-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.interest-tag {
+    background: #ecf0f1;
+    padding: 7px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: background 0.2s;
+}
+
+.interest-tag input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+}
+
+.interest-tag:hover {
+    background: #d5dbdb;
+}
+
+/* Generate button */
+.generate-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.generate-btn:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* Loading */
+.loading {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.loading p {
+    color: #666;
+    margin-top: 10px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ddd;
+    border-top: 4px solid #e74c3c;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Error */
+.error-msg {
+    background: #fdecea;
+    color: #c0392b;
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: left;
+    border: 1px solid #f5c6cb;
+}
+
+/* Results */
+.results-section {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.results-section > h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.results-section > h3 {
+    margin: 25px 0 12px;
+    font-size: 22px;
+    color: #2c3e50;
+}
+
+.itinerary-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    line-height: 1.7;
+    font-size: 15px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+/* Typing cursor during streaming */
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: #e74c3c;
+    animation: blink 0.7s step-end infinite;
+    vertical-align: text-bottom;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Map */
+.map-container {
+    height: 400px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    background: #ecf0f1;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .map-container {
+        height: 280px;
+    }
+
+    .planner-section > h2 {
+        font-size: 26px;
+    }
+
+    .itinerary-content {
+        padding: 15px;
+        max-height: 450px;
+    }
+}
