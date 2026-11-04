@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Decodes a base64 encoded API key to prevent easy plaintext scraping
 function getApiKey() {
-    var encoded = "QUl6YVN5Q2hQanoxalhrOWhZVW52R2h5eC1idFN1WV9SeVNfV2tj";
+
     return atob(encoded);
 }
 
